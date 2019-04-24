@@ -3,6 +3,9 @@ import Backdrop from '../Backdrop/Backdrop';
 
 import cls from './CompareModal.module.css';
 
+// higher order component that takes in whether or not to display
+// this will take an array of up to 4 different plans to compare, minimum of 2
+// it also passes whether to show to the backdrop, which will coverup any other components
 const CompareModal = props => {
         return (
                 <div>
