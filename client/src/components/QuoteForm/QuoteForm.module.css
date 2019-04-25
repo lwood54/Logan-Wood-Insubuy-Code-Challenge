@@ -5,3 +5,189 @@ background color: #f0f3f6
 font color / tab background color: #406a95
 
 */
+* {
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+label {
+        margin-top: 10px;
+}
+
+.FormCard {
+        border: 1px solid rgba(165, 165, 165, 0.575);
+        border-radius: 3px;
+        width: 70%;
+        margin: auto;
+}
+.QuoteForm {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+}
+
+.labelHeading {
+        margin: 5px;
+}
+
+select {
+        padding: 8px;
+        border-radius: 2px;
+        border: 0.5px solid rgba(187, 185, 185, 0.623);
+        height: 40px;
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
+                no-repeat right rgb(250, 249, 249);
+        -webkit-appearance: none;
+        background-position-x: 95%;
+}
+
+.policyLabel {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 5px;
+}
+
+.ageContainer {
+        background-color: #f4f4f4;
+        border: 1px solid rgba(165, 165, 165, 0.575);
+        padding: 5px;
+        margin: 0 5px;
+}
+
+.ageTitle {
+        margin: 0;
+        display: flex;
+}
+
+.hr {
+        border-width: 0.5px;
+        border: 1px solid rgba(194, 193, 193, 0.466);
+}
+
+.ageInputContainer {
+        display: flex;
+}
+
+.ageCol1 {
+        margin: 0 5px;
+        width: 10%;
+        text-align: center;
+}
+
+.ageCol2 {
+        margin: 0 5px;
+        width: 40%;
+        text-align: center;
+}
+
+.ageInput {
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        width: 40%;
+}
+
+.dateLabel,
+.citizenshipLabel,
+.mailingStateLabel {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 5px;
+}
+
+.date {
+        color: rgba(146, 146, 151, 0.884);
+        width: 50%;
+}
+.dateSelector {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px;
+}
+
+.dateContainer {
+        display: flex;
+        flex-direction: row;
+}
+
+.datePlaceholder {
+        margin: 0;
+        border: 1px solid rgba(165, 165, 165, 0.575);
+        text-align: left;
+        line-height: 40px;
+        height: 40px;
+        padding-left: 10px;
+}
+
+.formFieldError {
+        border: 3px solid rgb(175, 48, 48);
+        border-radius: 3px;
+}
+
+.FormHeading {
+        background-color: #f0f3f6;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+}
+
+.HeaderTitle {
+        margin-left: 5px;
+        color: #406a95;
+}
+
+.HeaderImage {
+        max-height: 65px;
+        max-width: 125px;
+}
+
+.citizenshipInput,
+.mailingStateInput {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 10px;
+}
+
+.submit {
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        margin-top: 30px;
+}
+
+/* .submitButton {
+        border: none;
+        background-color: #ed8029;
+        height: 40px;
+        width: 175px;
+        color: #fff;
+        font-size: 1.2em;
+        cursor: pointer;
+        border-radius: 2px;
+} */
+
+.submitButton {
+        background: #ed8029;
+        border: 0;
+        border-radius: 2px;
+        color: #fff;
+        cursor: pointer;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        font-size: 1em;
+        padding: 0.5em 1.4em;
+        text-align: center;
+}
+
+.resetButtonContainer {
+        width: 100%;
+        text-align: center;
+        margin: 25px auto;
+}
+
+.resetButton {
+        text-align: center;
+        border: none;
+        font-style: italic;
+        text-decoration: underline;
+        font-size: 1.1em;
+        cursor: pointer;
+}
