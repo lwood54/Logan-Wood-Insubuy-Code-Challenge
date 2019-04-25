@@ -1,0 +1,28 @@
+.ListView {
+        display: flex;
+        flex-direction: column;
+}
+
+.GridView {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+}
+
+.ButtonContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 100px;
+}
+
+.sortButtons {
+        margin: 5px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: rgb(1, 89, 161);
+        color: #fff;
+        text-align: center;
+}

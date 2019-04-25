@@ -5,7 +5,7 @@ import cls from './Plan.module.css';
 // this will be the individual visual component that displays each plan
 const Plan = props => {
         return (
-                <div className={cls.PlanCard}>
+                <div className={cls.PlanCard} onClick={() => props.handleComparison(props.id)}>
                         <h1 className={cls.PlanTitle}>{props.name}</h1>
                         <p className={cls.Description}>{props.description}</p>
                         <h4 className={cls.Price}>Price: ${props.price}</h4>

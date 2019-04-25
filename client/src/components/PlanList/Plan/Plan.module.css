@@ -12,7 +12,7 @@ rgb(1, 89, 161)
 
 .PlanCard {
         border: 1px solid rgba(165, 165, 165, 0.575);
-        width: 50%;
+        width: 45%;
         margin: 10px auto;
 }
 
@@ -20,7 +20,7 @@ rgb(1, 89, 161)
         margin-top: 0;
         padding: 10px;
         width: 100%;
-        background-color: rgb(51, 43, 94);
+        background-color: rgb(36, 152, 123);
         color: #fff;
         box-sizing: border-box;
 }

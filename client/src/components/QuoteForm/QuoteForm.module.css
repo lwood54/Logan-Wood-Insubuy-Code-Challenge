@@ -9,7 +9,7 @@ font color / tab background color: #406a95
         font-family: 'Trebuchet MS', Helvetica, sans-serif;
 }
 
-label {
+.FormCard label {
         margin-top: 10px;
 }
 
@@ -29,7 +29,7 @@ label {
         margin: 5px;
 }
 
-select {
+.policyLabel select {
         padding: 8px;
         border-radius: 2px;
         border: 0.5px solid rgba(187, 185, 185, 0.623);
