@@ -3,7 +3,7 @@ import QuoteForm from './components/QuoteForm/QuoteForm';
 import PlanList from './components/PlanList/PlanList';
 
 function App() {
-        const [showPlans, setShowPlans] = useState(false);
+        const [showPlans, setShowPlans] = useState(true);
         const toggleShowPlans = () => {
                 setShowPlans(!showPlans);
         };

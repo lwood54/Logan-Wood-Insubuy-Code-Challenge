@@ -15,7 +15,7 @@ label {
 
 .FormCard {
         border: 1px solid rgba(165, 165, 165, 0.575);
-        border-radius: 3px;
+        border-radius: 2px;
         width: 90%;
         margin: auto;
 }

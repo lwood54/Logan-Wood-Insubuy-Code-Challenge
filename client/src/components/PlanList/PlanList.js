@@ -40,15 +40,52 @@ const PlanList = () => {
         const cancelModal = () => {
                 setShowModal(false);
         };
+        const [sortedPlans, setSortedPlans] = useState([]);
+        const [isSorted, setIsSorted] = useState(false);
+        const handleSort = e => {
+                let newPlans = [...plans];
+                if (e.target.id === 'byName') {
+                        newPlans.sort((a, b) => {
+                                if (a.name > b.name) {
+                                        return 1;
+                                }
+                                if (a.name < b.name) {
+                                        return -1;
+                                }
+                                return 0;
+                        });
+                        setIsSorted(true);
+                        setSortedPlans(newPlans);
+                } else if (e.target.id === 'byPrice') {
+                        newPlans.sort((a, b) => {
+                                if (a.price > b.price) {
+                                        return 1;
+                                }
+                                if (a.price < b.price) {
+                                        return -1;
+                                }
+                                return 0;
+                        });
+                        setIsSorted(true);
+                        setSortedPlans(newPlans);
+                }
+        };
         // creating display component by mapping the array of objects
         // this will need to change later to include filtering and sorting
         // it should have the filtering and sorting done first, then it should map through
         // the array and pass along data to display individually
         const plansDisplay = plans.map(plan => <Plan {...plan} key={plan.id} />);
+        const sortedPlansDisplay = sortedPlans.map(plan => <Plan {...plan} key={plan.id} />);
         return (
                 <div>
-                        {plansDisplay}
                         <button onClick={handleShowModal}>Show Modal</button>
+                        <button onClick={handleSort} id="byName">
+                                Sort By Name
+                        </button>
+                        <button onClick={handleSort} id="byPrice">
+                                Sort By Price
+                        </button>
+                        {isSorted ? sortedPlansDisplay : plansDisplay}
                         <CompareModal showModal={showModal} cancelModal={cancelModal}>
                                 <h1>This is where we will compare up to 4 plans, but not fewer than 2.</h1>
                         </CompareModal>
