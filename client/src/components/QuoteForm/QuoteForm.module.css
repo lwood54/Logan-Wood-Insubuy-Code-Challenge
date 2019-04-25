@@ -16,7 +16,7 @@ label {
 .FormCard {
         border: 1px solid rgba(165, 165, 165, 0.575);
         border-radius: 3px;
-        width: 70%;
+        width: 90%;
         margin: auto;
 }
 .QuoteForm {
@@ -33,9 +33,9 @@ select {
         padding: 8px;
         border-radius: 2px;
         border: 0.5px solid rgba(187, 185, 185, 0.623);
-        height: 40px;
+        height: 50px;
         background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
-                no-repeat right rgb(250, 249, 249);
+                no-repeat right #fff;
         -webkit-appearance: none;
         background-position-x: 95%;
 }
@@ -69,13 +69,13 @@ select {
 
 .ageCol1 {
         margin: 0 5px;
-        width: 10%;
+        width: 50px;
         text-align: center;
 }
 
 .ageCol2 {
         margin: 0 5px;
-        width: 40%;
+        width: 150px;
         text-align: center;
 }
 
@@ -83,7 +83,7 @@ select {
         height: 35px;
         line-height: 35px;
         text-align: center;
-        width: 40%;
+        width: 150px;
 }
 
 .dateLabel,
@@ -101,6 +101,7 @@ select {
 .dateSelector {
         width: 100%;
         box-sizing: border-box;
+        height: 48px;
         padding: 5px;
 }
 
@@ -113,8 +114,8 @@ select {
         margin: 0;
         border: 1px solid rgba(165, 165, 165, 0.575);
         text-align: left;
-        line-height: 40px;
-        height: 40px;
+        line-height: 45px;
+        height: 45px;
         padding-left: 10px;
 }
 
@@ -132,6 +133,8 @@ select {
 
 .HeaderTitle {
         margin-left: 5px;
+        border-left: 1px solid #406a9560;
+        padding-left: 5px;
         color: #406a95;
 }
 
@@ -154,27 +157,15 @@ select {
         margin-top: 30px;
 }
 
-/* .submitButton {
+.submitButton {
         border: none;
         background-color: #ed8029;
         height: 40px;
-        width: 175px;
+        width: 150px;
         color: #fff;
         font-size: 1.2em;
         cursor: pointer;
         border-radius: 2px;
-} */
-
-.submitButton {
-        background: #ed8029;
-        border: 0;
-        border-radius: 2px;
-        color: #fff;
-        cursor: pointer;
-        font-family: 'Trebuchet MS', Helvetica, sans-serif;
-        font-size: 1em;
-        padding: 0.5em 1.4em;
-        text-align: center;
 }
 
 .resetButtonContainer {
@@ -190,4 +181,43 @@ select {
         text-decoration: underline;
         font-size: 1.1em;
         cursor: pointer;
+        color: #551a8b;
+        font-weight: lighter;
+}
+
+.ageInputFullScreen {
+        display: none;
+}
+
+@media (min-width: 900px) {
+        .QuoteForm {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+        }
+
+        .ageInputFullScreen {
+                display: inline-block;
+                width: 100%;
+                /* margin: 0 5px; */
+                height: 50px;
+                box-sizing: border-box;
+                padding-left: 10px;
+        }
+
+        .ageContainer {
+                display: none;
+        }
+
+        .policyLabel,
+        .ageLabel,
+        .dateLabel,
+        .citizenshipLabel,
+        .mailingStateLabel {
+                width: 45%;
+        }
+
+        .mailingStateLabel {
+                padding-right: 48%;
+        }
 }

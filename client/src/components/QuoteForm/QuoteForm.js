@@ -56,9 +56,6 @@ const QuoteForm = props => {
                         return false;
                 }
         };
-        const handleAgeReset = () => {
-                setAge('');
-        };
 
         const [showStartDate, setShowStartDate] = useState(false);
         const handleShowStartDate = () => {
@@ -161,6 +158,22 @@ const QuoteForm = props => {
                 }
         };
 
+        const handleFormReset = () => {
+                setPolicyVal(0);
+                setAge('');
+                setStartDate(null);
+                setEndDate(null);
+                setDateError('');
+                setShowStartDate(false);
+                setShowEndDate(false);
+                setCitizenship('');
+                setMailingState('');
+                setIsPolicyValid(true);
+                setIsAgeValid(true);
+                setIsCitValid(true);
+                setIsStateValid(true);
+        };
+
         return (
                 <div className={cls.FormCard}>
                         <div className={cls.FormHeading}>
@@ -192,6 +205,14 @@ const QuoteForm = props => {
                                         }
                                 >
                                         <h4 className={cls.labelHeading}>Age</h4>
+                                        <input
+                                                type="text"
+                                                value={age}
+                                                name="age"
+                                                className={[cls.ageInputFullScreen].join(' ')}
+                                                placeholder="Enter your age"
+                                                onChange={handleAgeChange}
+                                        />
                                         <div className={cls.ageContainer}>
                                                 <div className={cls.ageTitle}>
                                                         <h4 className={cls.ageCol1}>#</h4>
@@ -209,7 +230,6 @@ const QuoteForm = props => {
                                                                 )}
                                                                 placeholder={agePlaceholder}
                                                                 onChange={handleAgeChange}
-                                                                onClick={handleAgeReset}
                                                         />
                                                 </div>
                                         </div>
@@ -321,7 +341,9 @@ const QuoteForm = props => {
                                 </label>
                         </form>
                         <div className={cls.resetButtonContainer}>
-                                <button className={cls.resetButton}>Reset Form</button>
+                                <button className={cls.resetButton} onClick={handleFormReset}>
+                                        Reset Form
+                                </button>
                         </div>
                 </div>
         );
