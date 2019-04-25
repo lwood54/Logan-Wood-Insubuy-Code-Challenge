@@ -220,4 +220,8 @@ select {
         .mailingStateLabel {
                 padding-right: 48%;
         }
+
+        .submitButton {
+                width: 92%;
+        }
 }
